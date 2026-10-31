@@ -1,0 +1,53 @@
+ELEARN – ONLINE LEARNING PLATFORM
+PROJECT REPORT
+
+1. INTRODUCTION
+Elearn is a browser-based online learning platform prototype developed to demonstrate the core features of a modern learning management system. The system supports two user roles: learners and instructors. It is implemented entirely with HTML5, CSS3 and Vanilla JavaScript and does not require server-side processing.
+
+2. TOOLS AND TECHNOLOGIES USED
+• HTML5 – semantic page structure, forms, navigation, tables and content.
+• CSS3 – responsive layouts using Flexbox and CSS Grid, visual styling, transitions, focus states and media queries.
+• JavaScript – DOM manipulation, event handling, form validation, role-based navigation and simulated platform functions.
+• Browser localStorage – stores demo accounts, current login session, course enrollments, progress, assignment submissions, grades and community membership.
+• Visual Studio Code / text editor and a modern web browser – development and testing.
+
+3. KEY FEATURES IMPLEMENTED
+• Account registration and login with learner/instructor role selection.
+• Role-based dashboards and navigation.
+• Course catalogue with keyword search, topic and difficulty filters.
+• Course details showing description, instructor, duration, prerequisites and modules.
+• Learner course enrollment and lesson progress tracking.
+• Simulated assignment submission with required-field validation.
+• Instructor dashboard showing courses, learners and assignment submissions.
+• Simulated grading using grade selections.
+• Completion certificates when course progress reaches 100%.
+• Community clubs: browse, join and create interest-based groups.
+• Help centre with collapsible FAQs and a simulated contact form.
+• Responsive layout for desktop and mobile screens.
+• Consistent header, footer, color palette and reusable components.
+
+4. HOW ROLE-BASED ACCESS WAS SIMULATED
+The application stores the currently authenticated demo user as a JSON object in localStorage. The object contains the user's name, email and role. When a protected page loads, JavaScript checks the current user's role before rendering the page. Learners are directed to the learner dashboard and instructors to the instructor workspace. Navigation links are adjusted based on the signed-in role. This is a front-end demonstration only and must not be treated as secure authentication because browser storage can be inspected or modified by a user.
+
+5. DATA STORAGE AND APPLICATION LOGIC
+JavaScript arrays and objects provide sample course and user data. localStorage persists demo information between page refreshes in the same browser. Separate JavaScript files organize authentication, course data, learner progress and instructor grading. Reusable functions reduce duplicated code and keep responsibilities separated.
+
+6. CHALLENGES AND SOLUTIONS
+• Challenge: Supporting two user roles without a backend. Solution: Store a demo user object in localStorage and check the role before displaying protected views.
+• Challenge: Keeping navigation and page styling consistent. Solution: Generate a shared header and footer from a reusable JavaScript module and use one external stylesheet.
+• Challenge: Persisting course progress and assignment activity. Solution: Save structured JSON data in localStorage.
+• Challenge: Making the interface usable on mobile devices. Solution: Use CSS Grid, Flexbox and media queries, including a collapsible mobile navigation menu.
+• Challenge: Preventing incomplete form submissions. Solution: Use semantic labels, HTML validation attributes and JavaScript validation checks.
+
+7. TESTING
+Test the platform using the demo learner and instructor accounts. Verify registration, login, role restrictions, catalogue filters, course enrollment, progress updates, assignment submission, instructor grading, certificates, community actions, FAQ expansion and contact form feedback. Test the layout at desktop and mobile viewport widths. Record actual test screenshots in the screenshots folder using the evidence checklist.
+
+8. LIMITATIONS
+The project is a front-end prototype. It does not provide server-side authentication, a real database, secure password storage, file uploads, real email delivery, live video lessons or online payment. localStorage data is specific to the browser profile and device. The demo passwords are included only for assessment testing.
+
+9. CONCLUSION
+The Elearn prototype demonstrates how HTML, CSS and JavaScript can be combined to create an interactive and responsive learning platform. It implements the main learner and instructor workflows while applying semantic HTML, accessible form labels, responsive design, modular JavaScript and browser-based data persistence.
+
+Prepared as a TVET CDACC front-end project.
+
+Theme preference: A site-wide dark/light mode switch is available in the navigation. JavaScript applies the selected theme and localStorage preserves the preference across pages and browser sessions.

@@ -1,0 +1,6 @@
+
+/* Instructor grading simulation */
+const Instructor = (() => {
+ function renderGrading(){const target=document.querySelector("#grading-list");if(!target)return;const list=Learner.submissions();if(!list.length){target.innerHTML='<div class="empty">No assignments have been submitted yet. Learner submissions will appear here.</div>';return;}target.innerHTML=list.map(s=>`<div class="module"><div><b>${Elearn.escapeHTML(s.title)}</b><div class="form-note">${Elearn.escapeHTML(s.student)} · ${Elearn.escapeHTML(s.course)} · ${s.date}</div><div class="form-note">Submission: ${Elearn.escapeHTML(s.link)}</div></div><div style="min-width:125px"><select class="grade-select" data-id="${s.id}" aria-label="Grade assignment"><option value="">Grade</option><option ${s.grade==="A"?"selected":""}>A</option><option ${s.grade==="B"?"selected":""}>B</option><option ${s.grade==="C"?"selected":""}>C</option><option ${s.grade==="Resubmit"?"selected":""}>Resubmit</option></select></div></div>`).join("");target.querySelectorAll(".grade-select").forEach(sel=>sel.addEventListener("change",()=>{if(!sel.value)return;const list=Learner.submissions(),item=list.find(x=>x.id===Number(sel.dataset.id));if(item){item.grade=sel.value;localStorage.setItem("elearn_submissions",JSON.stringify(list));Elearn.toast("Grade saved: "+sel.value);}}));}
+ return {renderGrading};
+})();
