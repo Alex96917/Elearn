@@ -265,9 +265,6 @@ Computer Programming Student | Aspiring Full-Stack Developer
 - GitHub: [@Alex96917](https://github.com/Alex96917)
 - Portfolio: [Alex Kamau Portfolio](https://alexkamauportfolio.vercel.app/)
 
-## 📄 Academic Disclaimer
-
-This application was developed as part of an academic assignment for learning and assessment purposes under the TVET CDACC Computer Programming programme.
 
 It demonstrates the practical application of front-end web development concepts and is not intended to replace a fully deployed commercial learning management system.
 
